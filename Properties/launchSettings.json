@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Calcumalator (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Calcumalator (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

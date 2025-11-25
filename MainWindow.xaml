@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Calcumalator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calcumalator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    mc:Ignorable="d"
+    Title="Calcumalator">
+
+    <Window.SystemBackdrop>
+        <DesktopAcrylicBackdrop />
+    </Window.SystemBackdrop>
+
+    <StackPanel 
+        Width="400"
+        Height="600"
+        HorizontalAlignment="Center">
+        <TitleBar
+            Title="Calcumalator"
+            Height="30" 
+            Grid.Row="0">
+        </TitleBar>
+        <TextBox 
+            PlaceholderText="Some Number"
+            x:Name="OutputText"
+            TextChanged="OutputText_TextChanged"
+            Height="50" 
+            TextAlignment="Center" 
+            Width="350" 
+            Padding="5, 5, 0, 0"
+            HorizontalAlignment="Center"
+            Grid.Row="1"/>
+        
+        <Grid Width="380" Height="500" VerticalAlignment="Center" Padding="5, 10, 5, 0">
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="VerticalAlignment" Value="Stretch"/>
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Grid.Resources>
+            <controls:UniformGrid Columns="4" Rows="5" ColumnSpacing="5" RowSpacing="5">
+                <Button x:Name="NumButton" Click="NumButton_Click" Content="num"/>
+                <Button x:Name="DivideButton" Click="DivideButton_Click" Content="/"/>
+                <Button x:Name="MultiplyButton" Click="MultiplyButton_Click" Content="*"/>
+                <Button x:Name="SubtractButton" Click="SubtractButton_Click" Content="-"/>
+
+                <Button x:Name="SevenButton" Click="SevenButton_Click" Content="7"/>
+                <Button x:Name="EightButton" Click="EightButton_Click" Content="8 ^"/>
+                <Button x:Name="NineButton" Click="NineButton_Click" Content="9"/>
+                <Button x:Name="AddButton" Click="AddButton_Click" Grid.RowSpan="2" Content="+"/>
+
+                <Button x:Name="FourButton" Click="FourButton_Click" Content="4 &lt;"/>
+                <Button x:Name="FiveButton" Click="FiveButton_Click" Content="5"/>
+                <Button x:Name="SixButton" Click="SixButton_Click" Content="6 >"/>
+
+                <Button x:Name="OneButton" Click="OneButton_Click" Content="1"/>
+                <Button x:Name="TwoButton" Click="TwoButton_Click" Content="2 v"/>
+                <Button x:Name="ThreeButton" Click="ThreeButton_Click" Content="3"/>
+                <Button x:Name="EnterButton" Click="EnterButton_Click" Content="enter" Grid.RowSpan="2"/>
+
+                <Button x:Name="ZeroButton" Click="ZeroButton_Click" Content="0 ins" Grid.ColumnSpan="2"/>
+                <Button x:Name="DecimalButton" Click="DecimalButton_Click" Content=". del"/>
+            </controls:UniformGrid>
+        </Grid>
+        
+        </StackPanel>
+</Window>

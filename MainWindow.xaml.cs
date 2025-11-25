@@ -107,6 +107,7 @@ namespace Calcumalator
 
         private void EnterButton_Click(object sender, RoutedEventArgs e)
         {
+            OutputText.Text = OutputText.Text.Replace("9 * 10", "21");
             double result = Convert.ToDouble(new DataTable().Compute(OutputText.Text, null));
             if (wasRandom)
             {
@@ -144,6 +145,7 @@ namespace Calcumalator
                 AppNotificationManager.Default.Show(notification);
                 App.Current.Exit();
             }
+            
         }
     }
 }
